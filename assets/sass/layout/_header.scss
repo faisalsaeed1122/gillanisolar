@@ -1,0 +1,305 @@
+header {
+  border-bottom: 1px solid $light-grey-color;
+  height: 100px;
+  position: relative;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+  @include transition;
+
+  @include media-breakpoint-down(md) {
+    height: 70px;
+    // background: rgba($brand-second-color, 0.3);
+  }
+
+  .header__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+
+    @include media-breakpoint-down(md) {
+      height: 70px;
+    }
+
+    .logo__holder {
+      .logo {
+        img {
+          width: 187px;
+          height: 36px;
+        }
+      }
+    }
+    .header__right {
+      display: flex;
+      align-items: center;
+      column-gap: 2rem;
+
+      @include media-breakpoint-down(md) {
+        .contactUs__btn {
+          display: none;
+        }
+      }
+
+      .phone__no {
+        font-weight: 300;
+        color: $white-color;
+        @include media-breakpoint-down(md) {
+          display: none;
+        }
+      }
+
+      .toggleButton__outer {
+        border-left: 1px solid $light-grey-color;
+        padding-left: 30px;
+        height: 100px;
+        @include flex-center-vert;
+        @include transition;
+
+        @include media-breakpoint-down(md) {
+          border-left: 0;
+          height: 70px;
+        }
+
+        .toggleButton__wrap {
+          position: relative;
+          height: 14px;
+          width: 32px;
+          cursor: pointer;
+          z-index: 100;
+          transition: opacity 0.25s ease;
+
+          span {
+            background: $white-color;
+            border: none;
+            height: 3px;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: all 0.35s ease;
+            cursor: pointer;
+
+            &:nth-of-type(2) {
+              top: 8px;
+            }
+          }
+
+          &:hover {
+            opacity: 0.7;
+          }
+        }
+      }
+    }
+  }
+
+  // &.white {
+  //   .logo__holder {
+  //     .logo {
+  //       img {
+  //         filter: brightness(0%);
+  //       }
+  //     }
+  //   }
+
+  //   .phone__no {
+  //     color: $black-color !important;
+  //   }
+
+  //   .toggleButton__outer {
+  //     .toggleButton__wrap {
+  //       span {
+  //         background: $black-color !important;
+  //       }
+  //     }
+  //   }
+  // }
+}
+
+.toggleButton__wrap.active .top {
+  transform: translateY(9px) translateX(0) rotate(45deg);
+}
+.toggleButton__wrap.active .middle {
+  transform: translateY(1px) translateX(0) rotate(-45deg);
+}
+
+.menu {
+  position: fixed;
+  background: $brand-second-color;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s, visibility 0.35s, height 0.35s;
+  overflow: hidden;
+  z-index: 9;
+
+  &.open {
+    opacity: 1;
+    visibility: visible;
+    height: 100%;
+
+    li {
+      animation: fadeInRight 0.7s ease forwards;
+      animation-delay: 0.35s;
+
+      &:nth-of-type(2) {
+        animation-delay: 0.4s;
+      }
+      &:nth-of-type(3) {
+        animation-delay: 0.45s;
+      }
+      &:nth-of-type(4) {
+        animation-delay: 0.5s;
+      }
+      &:nth-of-type(5) {
+        animation-delay: 0.55s;
+      }
+      &:nth-of-type(6) {
+        animation-delay: 0.6s;
+      }
+      &:nth-of-type(7) {
+        animation-delay: 0.65s;
+      }
+    }
+  }
+
+  .menu-container {
+    display: flex;
+    align-items: center;
+    height: calc(100vh + 100px);
+
+    .image__container {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      z-index: 1;
+    }
+    .nav {
+      display: flex;
+      flex-direction: column;
+      .menu__item {
+        position: relative;
+        opacity: 0;
+        display: inline;
+        width: fit-content;
+
+        .menu__link {
+          position: relative;
+          font-size: 45px;
+          color: #ccc;
+          z-index: 2;
+          font-weight: 300;
+          padding: 20px 0;
+
+          @include media-breakpoint-down(md) {
+            font-size: 36px;
+          }
+
+          &:after {
+            font-family: "bootstrap-icons" !important;
+            content: "\F138";
+            @include font-size(50px);
+            position: absolute;
+            left: 0;
+            color: $brand-color;
+            opacity: 0;
+            @include transition;
+            top: 14px;
+
+            @include media-breakpoint-down(md) {
+              top: 14px;
+            }
+          }
+          &:hover {
+            color: $white-color;
+            padding-left: 60px;
+
+            &:after {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+    .menu__img {
+      position: absolute;
+      width: 500px;
+      height: 250px;
+      top: 30px;
+      right: 0;
+      opacity: 10;
+      overflow: hidden;
+
+      @include media-breakpoint-down(md) {
+        display: none;
+      }
+    }
+    .menu__img {
+      img {
+        position: absolute;
+        @include object-fit-cover;
+        top: 0;
+        left: 0;
+        transition: 0.8s cubic-bezier(0.9, 0, 0.1, 1);
+        clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+
+        &.active {
+          transform: scale(1);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 20%;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
+.fixed-header {
+  animation: 0.7s ease-in-out 0.1s normal both 1 running stickyhead;
+  position: fixed;
+  top: 0px;
+  background: $brand-second-color;
+  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.04);
+  width: 100%;
+  z-index: 999;
+  @include transition;
+  height: 70px;
+  // border-bottom: 0;
+
+  .logo__holder {
+    img {
+      width: 118px !important;
+      height: 38px !important;
+    }
+  }
+  .outline-button-md {
+    @include padding(10px, 24px, 10px, 24px);
+  }
+  .header__content {
+    height: 70px !important;
+  }
+  .toggleButton__outer {
+    height: 70px !important;
+  }
+}
+@keyframes stickyhead {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}

@@ -1,0 +1,119 @@
+.button-outer {
+  @include border-radius(4px);
+  @include transition();
+  text-align: center;
+  display: inline-block;
+  font-weight: 800;
+  border: 0;
+  white-space: nowrap;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  column-gap: 1.5rem;
+  width: fit-content;
+
+  i {
+    display: flex;
+    &::before {
+      font-size: 30px;
+    }
+  }
+  .button--text {
+    letter-spacing: 2px;
+  }
+
+  &:hover {
+    column-gap: 2.2rem;
+  }
+
+  &.full-width-button {
+    justify-content: space-between;
+  }
+}
+
+.button-sm {
+  @include padding(0.5rem, 1.5rem, 0.5rem, 1.5rem);
+  @include font-size(14px);
+}
+.button-md {
+  @include padding(12px, 24px, 12px, 24px);
+  @include font-size(14px);
+}
+.button-lg {
+  @include padding(1.2rem, 2rem, 1.2rem, 2rem);
+  @include font-size(16px);
+}
+
+.button--primary {
+  background: $brand-color;
+  color: $white-color;
+  &:hover {
+    color: $white-color;
+  }
+}
+
+.button--green {
+  background: $success-color;
+  color: $white-color;
+  &:hover {
+    color: $white-color;
+  }
+}
+
+.button--white {
+  background: $white-color;
+  color: $brand-second-color;
+}
+
+.outline-button {
+  @include border-radius(50px);
+  @include transition();
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  @include flex-center;
+  text-align: center;
+  width: fit-content;
+}
+
+.outline-button--dark {
+  background: transparent;
+  border: 2px solid $brand-second-color;
+  color: $brand-second-color;
+  &:hover {
+    border: 2px solid $brand-color;
+    color: $brand-color;
+  }
+}
+
+.outline-button--white {
+  background: transparent;
+  border: 2px solid $white-color;
+  color: $white-color;
+  &:hover {
+    border: 2px solid $brand-color;
+    color: $brand-color;
+  }
+}
+
+.outline-button--primary {
+  background: transparent;
+  border: 2px solid $brand-color;
+  color: $brand-color;
+  &:hover {
+    border: 2px solid $brand-second-color;
+    color: $brand-second-color;
+  }
+}
+
+.outline-button-sm {
+  @include padding(12px, 24px, 12px, 24px);
+  @include font-size(12px);
+}
+.outline-button-md {
+  @include padding(14px, 24px, 14px, 24px);
+  @include font-size(14px);
+}
+.outline-button-lg {
+  @include padding(12px, 24px, 12px, 24px);
+  @include font-size(16px);
+}

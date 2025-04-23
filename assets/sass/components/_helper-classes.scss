@@ -1,0 +1,148 @@
+.border-radius-20 {
+  @include border-radius(20px);
+}
+.border-radius-16 {
+  @include border-radius(16px);
+}
+.border-radius-10 {
+  @include border-radius(10px);
+}
+.border-radius-5 {
+  @include border-radius(5px);
+}
+.fs-11 {
+  @include font-size(11px);
+}
+.fs-12 {
+  @include font-size(12px);
+}
+.fs-14 {
+  @include font-size(14px);
+}
+.fs-16 {
+  @include font-size(16px);
+}
+.fs-18 {
+  @include font-size(18px);
+}
+.fs-20 {
+  @include font-size(20px);
+}
+.fs-22 {
+  @include font-size(22px);
+}
+.fs-24 {
+  @include font-size(24px);
+}
+.fs-26 {
+  @include font-size(26px);
+}
+.fs-28 {
+  @include font-size(28px);
+}
+.fs-30 {
+  @include font-size(30px);
+}
+.fs-32 {
+  @include font-size(32px);
+}
+.fs-34 {
+  @include font-size(34px);
+}
+.fs-36 {
+  @include font-size(36px);
+}
+
+.white-color-text {
+  color: $white-color;
+}
+.black-color-text {
+  color: $black-color;
+}
+.brand-color-text {
+  color: $brand-color;
+}
+.blue-color-text {
+  color: $text-color;
+}
+.grey-color-text {
+  color: rgb(106, 113, 154);
+}
+.text-success {
+  color: $success-color !important;
+}
+
+// .text-bg-success {
+//     background: $success-color !important;
+// }
+
+// .text-danger {
+//     color: $danger-color !important;
+// }
+
+.bg-white {
+  background: $white-color;
+}
+.bg-black {
+  background: $black-color;
+}
+.bg-blue {
+  background: $brand-color;
+}
+.bg-dark-blue {
+  background: $brand-second-color;
+}
+.bg-light-blue {
+  background: $light-blue-color;
+}
+.bg-light-pink {
+  background: #f9f3ef;
+}
+.bg-light-grey {
+  background: $grey-color-1;
+}
+
+strong {
+  font-weight: 800;
+}
+.fw-300 {
+  font-weight: 300;
+}
+.fw-400 {
+  font-weight: 400;
+}
+.fw-500 {
+  font-weight: 500;
+}
+.fw-600 {
+  font-weight: 600;
+}
+.fw-700 {
+  font-weight: 700;
+}
+
+.h-100vh {
+  height: 100vh;
+}
+
+.icon-bold {
+  &::before {
+    font-weight: 800 !important;
+  }
+}
+
+.button-full-width {
+  @include media-breakpoint-down(md) {
+    width: 100%;
+  }
+}
+.width-fit-content {
+  width: fit-content;
+}
+
+.table {
+  color: $text-color;
+}
+.object-fit-cover {
+  object-fit: cover;
+}

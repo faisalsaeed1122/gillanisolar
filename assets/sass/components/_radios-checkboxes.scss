@@ -1,0 +1,211 @@
+/* custom checkboxes and radio */
+.radios,
+.checkboxes {
+    @include margin(0, 0, 0, 0);
+    @include flex-column;
+    flex-wrap: nowrap;
+
+    label {
+        cursor: pointer;
+        line-height: 1rem;
+        @include font-size(12px);
+        display: flex;
+        align-items: center;
+        height: 20px;
+        width: fit-content;
+    }
+    @mixin vh() {
+        border: 0;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+
+    input[type="checkbox"],
+    input[type="radio"] {
+        @include vh();
+        &:focus {
+            + label {
+                &:before {
+                }
+            }
+        }
+        + label {
+            position: relative;
+            @include padding(0, 0, 0, 30px);
+            @include margin(0, 0, 0, 0);
+            user-select: none;
+            color: $text-color;
+            &:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 18px;
+                height: 18px;
+                opacity: 1;
+                border: 2px solid $border-color;
+                background: $white-color;
+                text-align: center;
+                @include transition;
+                @include border-radius(3px);
+            }
+
+            &:after {
+                content: "";
+                position: absolute;
+                transform: scale(0);
+                transition: transform 200ms ease-out;
+            }
+        }
+    }
+
+    input[type="checkbox"] {
+        + label {
+            &:after {
+                background-color: transparent;
+                content: "";
+                display: block;
+                position: absolute;
+                left: 7px;
+                top: 4px;
+                width: 5px;
+                height: 8px;
+                opacity: 0;
+                border-bottom: 2px solid $brand-color;
+                border-right: 2px solid $brand-color;
+                @include transform(rotate(45deg));
+                transition: border-color 0.3s ease;
+            }
+        }
+        &:checked {
+            + label {
+                &:before {
+                    content: "";
+                    opacity: 1;
+                    border: 2px solid $brand-color;
+                    background: $brand-color;
+                }
+
+                &:after {
+                    content: "";
+                    opacity: 1;
+                    border-bottom: 2px solid $white-color;
+                    border-right: 2px solid $white-color;
+                }
+            }
+        }
+        &:hover {
+            + label {
+                &:before {
+                    border: 2px solid $brand-color;
+                }
+            }
+        }
+    }
+
+    input[type="radio"] {
+        + label {
+            &:before,
+            &:after {
+                @include border-radius(50%);
+            }
+            &:after {
+                left: 5px;
+                top: 5px;
+                width: 8px;
+                height: 8px;
+            }
+        }
+        &:checked {
+            + label {
+                &:before {
+                    animation: borderscale 300ms ease-in;
+                    border: 2px solid $brand-color;
+                }
+                &:after {
+                    background: $brand-color;
+                    @include transform(scale(1));
+                }
+            }
+        }
+        &:hover {
+            + label {
+                &:before {
+                    border: 2px solid $brand-color;
+                }
+            }
+        }
+    }
+}
+
+.ItemsGroup__Grid {
+    .btn-check:checked + .btn {
+        background: $brand-second-color !important;
+        color: $white-color !important;
+        box-shadow: none;
+        outline: none !important;
+        p {
+            color: $white-color !important;
+        }
+        &:hover {
+            border: 1px solid transparent;
+        }
+    }
+
+    .Item {
+        label {
+            @include flex-column;
+            color: $text-color;
+            font-weight: 800;
+
+            &.btn {
+                width: 100%;
+                background: $grey-color-1;
+                @include border-radius(8px);
+                @include padding(20px, 20px, 20px, 20px);
+                box-shadow: none;
+                border: 1px solid transparent;
+                height: 100%;
+
+                i {
+                    @include margin(0, 0, 8px, 0);
+                    @include flex-center;
+                    &:before {
+                        @include font-size(24px);
+                    }
+                }
+
+                &:hover {
+                    color: $brand-second-color;
+                    border: 1px solid $brand-color;
+                }
+            }
+        }
+    }
+
+    &.Grid-2 {
+        display: grid;
+        grid-gap: 0.5rem;
+        grid-template-columns: 1fr 1fr;
+    }
+    &.Grid-3 {
+        display: grid;
+        grid-gap: 0.5rem;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    &.Grid-4 {
+        display: grid;
+        grid-gap: 0.5rem;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    &.Grid-5 {
+        display: grid;
+        grid-gap: 0.5rem;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+}

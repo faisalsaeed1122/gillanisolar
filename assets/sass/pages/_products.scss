@@ -1,0 +1,346 @@
+.back__button {
+  margin-bottom: 2rem;
+  color: $brand-second-color;
+  font-weight: 600;
+  display: inline-flex;
+  font-size: 20px;
+
+  i {
+    color: $brand-color;
+    margin-right: 0.8rem;
+    @include transition;
+  }
+
+  &:hover {
+    color: $brand-color;
+
+    i {
+      margin-right: 1rem;
+    }
+  }
+}
+
+.all__products {
+  .innerPages__content {
+    .card__grid {
+      position: relative;
+      margin-bottom: 3rem;
+      .customCard__wrap {
+        display: none;
+      }
+      .card__title {
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .card__grid .customCard__wrap:nth-child(even) {
+    margin-top: 2rem;
+    @include media-breakpoint-down(md) {
+      margin-top: 0;
+    }
+  }
+
+  .card__grid .customCard__wrap:nth-child(odd) {
+    align-self: start;
+  }
+}
+
+.project__details {
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  h4 {
+    font-weight: 700;
+    font-size: 28px;
+    color: $brand-color;
+    margin-bottom: 3rem;
+  }
+  .detail__left {
+    p {
+      font-size: 18px;
+      margin-bottom: 1rem;
+      font-weight: 300;
+    }
+  }
+
+  .detail__right {
+    p {
+      font-size: 18px;
+      margin-bottom: 1rem;
+      font-weight: 300;
+    }
+  }
+
+  .list__group {
+    li {
+      font-size: 18px;
+      font-weight: 300;
+      position: relative;
+      padding-left: 20px;
+    }
+
+    &.list__counter {
+      counter-reset: counter;
+      li {
+        &::before {
+          counter-increment: counter;
+          content: counter(counter);
+          position: absolute;
+          left: 0;
+          top: 0;
+          font-size: 18px;
+          font-weight: 300;
+        }
+      }
+    }
+    &.list__circle {
+      li {
+        position: relative;
+        padding-left: 30px;
+        &::before {
+          content: "";
+          position: absolute;
+          left: 13px;
+          top: 10px;
+          background: $brand-second-color;
+          border-radius: 50%;
+          width: 6px;
+          height: 6px;
+        }
+      }
+    }
+  }
+
+  .comparison__table {
+    th {
+      font-size: 18px;
+      text-align: center;
+      padding: 20px 0;
+      border-bottom: 1px solid #888886;
+    }
+    tr {
+      td {
+        padding: 20px 30px;
+        border-bottom: 1px solid #888886;
+        &:first-child {
+          border-right: 1px solid #888886;
+        }
+      }
+    }
+
+    h5 {
+      color: #888886;
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+    }
+    ul {
+      li {
+        color: black;
+        font-size: 18px;
+      }
+    }
+  }
+
+  h2 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 100px;
+    width: 50%;
+    line-height: 1.2;
+
+    @include media-breakpoint-down(md) {
+      width: 100%;
+      margin-bottom: 50px;
+    }
+  }
+  .caption__content {
+    p {
+      font-weight: 300;
+      line-height: 1.5;
+      margin-bottom: 50px;
+    }
+
+    .list-group {
+      .list-group-item {
+        border-bottom: 1px solid $brand-second-color;
+        padding: 20px 0;
+        font-size: 18px;
+        font-weight: 700;
+        color: $brand-second-color;
+        span {
+          color: $light-grey-color;
+          width: 120px;
+          display: inline-block;
+        }
+      }
+    }
+
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
+  }
+}
+
+.product__images {
+  margin-bottom: 100px;
+
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+
+  .swiper {
+    position: relative;
+  }
+
+  .drag__box {
+    box-shadow: 0px 20px 20px 0px #bbbbba33;
+    @include border-radius(50%);
+    width: 120px;
+    height: 120px;
+    background: white;
+    @include flex-center;
+    text-transform: uppercase;
+    position: absolute;
+    right: 20px;
+    z-index: 99;
+    bottom: 200px;
+  }
+
+  .swiper-wrapper {
+    .swiper-slide {
+      .images__row {
+        display: flex;
+        column-gap: 1.5rem;
+      }
+
+      .figure__holder {
+        &.image__1 {
+          width: 290px;
+          height: 600px;
+          flex: 0 0 auto;
+
+          @include media-breakpoint-down(md) {
+          }
+
+          img {
+            width: 100%;
+            @include object-fit-cover;
+          }
+        }
+        &.image__2 {
+          width: 400px;
+          height: 800px;
+          margin-top: 100px;
+          flex: 0 0 auto;
+
+          @include media-breakpoint-down(md) {
+            margin-top: 0;
+          }
+
+          img {
+            width: 100%;
+            @include object-fit-cover;
+          }
+        }
+        &.image__3 {
+          margin-top: 200px;
+          height: 700px;
+          width: 600px;
+          flex: 0 0 auto;
+          @include media-breakpoint-down(md) {
+            margin-top: 0;
+          }
+
+          img {
+            width: 100%;
+            @include object-fit-cover;
+          }
+        }
+      }
+    }
+  }
+}
+
+.client__testimonials {
+  h4 {
+    font-weight: 700;
+    font-size: 28px;
+    color: $brand-color;
+    margin-bottom: 3rem;
+  }
+  .testimonial__grid {
+    display: flex;
+    column-gap: 10rem;
+    align-items: center;
+
+    @include media-breakpoint-down(md) {
+      flex-direction: column;
+      gap: 4rem;
+    }
+
+    .client__thumb {
+      @include border-radius(50%);
+      width: 400px;
+      height: 400px;
+      flex: 0 0 auto;
+      img {
+        @include border-radius(50%);
+        @include object-fit-cover;
+      }
+    }
+    .testimonial__caption {
+      .caption__content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        &::before {
+          content: "“";
+          color: $brand-color;
+          position: absolute;
+          top: -70px;
+          font-size: 70px;
+          font-weight: 300;
+          @include border-radius(50%);
+          height: 62px;
+          width: 62px;
+          background: rgba($brand-color, 0.1);
+          display: flex;
+          justify-content: center;
+          line-height: 94px;
+        }
+        h3 {
+          font-weight: 700;
+          font-size: 28px;
+          color: $brand-second-color;
+          line-height: 1.4;
+        }
+        h6 {
+          font-weight: 300;
+          font-size: 20px;
+          color: $brand-color;
+        }
+        span {
+          font-weight: 300;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  &.pempakGreen__testimonials {
+    .caption__content {
+      &::before {
+        color: $success-color !important;
+
+        background: rgba($success-color, 0.1);
+      }
+
+      h6 {
+        color: $success-color !important;
+      }
+    }
+  }
+}

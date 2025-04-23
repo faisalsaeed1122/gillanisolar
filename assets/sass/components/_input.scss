@@ -1,0 +1,143 @@
+.InputWrapper {
+    margin-bottom: 2rem;
+    background: $grey-color-1;
+    @include border-radius(8px);
+    padding-left: 1rem;
+    height: 60px;
+    border: 1px solid transparent;
+    @include flex-center-vert;
+    @include transition;
+    i {
+        @include font-size(22px);
+        margin-right: 8px;
+        display: flex;
+        &::before {
+            font-weight: 800 !important;
+        }
+    }
+
+    .form-control {
+        border: 0;
+        color: $text-color !important;
+        font-weight: 600;
+        background: none;
+        @include border-radius(8px);
+        padding: 18px 1rem 18px 0;
+        @include input-placeholder {
+            color: $text-grey-color;
+        }
+        &:focus {
+            box-shadow: none;
+        }
+    }
+    &:hover {
+        border: 1px solid $brand-color;
+    }
+
+    &.Input-lg {
+        height: 68px;
+        .form-control {
+            padding: 18px 1rem 18px 0;
+        }
+    }
+    &.Input-sm {
+        height: 40px;
+        .form-control {
+            padding: 7px 20px 7px 0;
+            @include font-size(13px);
+        }
+    }
+}
+
+.TextareaWrapper {
+    .form-control {
+        background: $grey-color-1 !important;
+        @include border-radius(8px);
+        border: 0;
+        color: $text-color;
+        font-weight: 600;
+        background: none;
+        height: 180px;
+        padding: 1rem 1rem 0 1rem;
+        @include transition;
+        border: 1px solid transparent;
+        resize: none;
+
+        @include input-placeholder {
+            color: $text-grey-color;
+        }
+
+        &:focus {
+            box-shadow: none;
+        }
+        &:hover {
+            border: 1px solid $brand-color;
+        }
+    }
+}
+
+.tagsinput {
+    max-width: 100%;
+    cursor: text;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    span {
+        &.tag {
+            font-size: 13px;
+            font-weight: 600 !important;
+            margin-bottom: 0 !important;
+            @include border-radius(50px);
+            background: #e5e6ef;
+            margin-right: 2px;
+            color: $text-color;
+            padding: 0 12px;
+            height: 30px;
+            @include flex-center-vert;
+
+            &:hover {
+                background: $grey-color-2;
+            }
+        }
+    }
+}
+.tagsinput input {
+    border: none;
+    box-shadow: none;
+    outline: none;
+    background-color: transparent;
+    padding: 0 6px;
+    margin: 0;
+    color: $text-color;
+    font-weight: 600;
+    // width: 100%;
+    &:focus {
+        border: none;
+        box-shadow: none;
+    }
+
+    @include input-placeholder {
+        color: $text-color;
+    }
+}
+
+.tagsinput .tag [data-role="remove"] {
+    margin-left: 8px;
+    cursor: pointer;
+    &:after {
+        content: "\F62A";
+        font-family: "bootstrap-icons" !important;
+        color: $text-color;
+        font-size: 16px;
+        display: flex;
+    }
+}
+
+.Form__Label {
+    color: $text-color;
+    font-weight: 800;
+    margin-bottom: 0.6rem;
+}

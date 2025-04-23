@@ -1,0 +1,23 @@
+.Breadcrumbs__Container {
+  position: relative;
+  margin-bottom: 3rem;
+  .Breadcrumbs__List {
+    color: $brand-second-color;
+    display: flex;
+    flex-wrap: wrap;
+    .Breadcrumbs__ListItem {
+      display: flex;
+      font-size: 18px;
+      font-weight: 400;
+      .Link__Anchor {
+        color: $brand-second-color;
+        font-size: 18px;
+        font-weight: 400;
+      }
+      .Separator {
+        padding: 0 20px;
+        color: $brand-color;
+      }
+    }
+  }
+}
