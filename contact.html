@@ -8,7 +8,21 @@
       content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no  shrink-to-fit=no"
     />
     <meta name="format-detection" content="telephone=no" />
-    <title>pempak</title>
+    <title>Gillani Solar</title>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-35EDXYK0CW"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-35EDXYK0CW");
+    </script>
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
     <link
       rel="stylesheet"
@@ -26,18 +40,17 @@
           <div class="header__content">
             <div class="logo__holder">
               <a href="index.html" class="logo">
-                <img src="assets/images/logo.svg" alt="" />
+                <img src="assets/images/logo.png" alt="" />
               </a>
             </div>
             <div class="header__right">
-              <div class="phone__no">+92-42-111-736-725 (111-PEMPAK)</div>
+              <div class="phone__no">+923040001216</div>
               <a
                 href="contact.html"
                 class="outline-button outline-button-md outline-button--white contactUs__btn"
               >
                 contact us
               </a>
-
               <div class="toggleButton__outer">
                 <div class="toggleButton__wrap" id="toggle">
                   <span class="top"></span>
@@ -59,92 +72,161 @@
                     <a href="about.html" class="menu__link">About</a>
                   </li>
                   <li class="menu__item" data-id="2">
-                    <a href="our-products.html" class="menu__link"
-                      >Our Products</a
-                    >
+                    <a href="packages.html" class="menu__link"> Packages</a>
                   </li>
                   <li class="menu__item" data-id="3">
-                    <a href="pempak-green.html" class="menu__link"
-                      >PEMPAK Green</a
-                    >
+                    <a href="products.html" class="menu__link"> Products</a>
                   </li>
                   <li class="menu__item" data-id="4">
-                    <a href="latest-news.html" class="menu__link"
-                      >Latest News</a
-                    >
+                    <a href="services.html" class="menu__link">Services</a>
                   </li>
+
                   <li class="menu__item" data-id="5">
-                    <a href="testimonials.html" class="menu__link"
-                      >Testimonials</a
-                    >
-                  </li>
-                  <li class="menu__item" data-id="6">
-                    <a href="registration-recognization.html" class="menu__link"
-                      >Awards</a
-                    >
-                  </li>
-                  <li class="menu__item" data-id="7">
                     <a href="contact.html" class="menu__link">Contact us</a>
                   </li>
                 </ul>
-                <div class="menu__img">
-                  <img
-                    id="1-bg__img"
-                    src="assets/images/about-hover-image.webp"
-                  />
-                  <img
-                    id="2-bg__img"
-                    src="assets/images/products-hover-image.webp"
-                  />
-                  <img
-                    id="3-bg__img"
-                    src="assets/images/pempak-green-hover-image.webp"
-                  />
-                  <img
-                    id="4-bg__img"
-                    src="assets/images/news-hover-image.webp"
-                  />
-                  <img
-                    id="5-bg__img"
-                    src="assets/images/testimonials-hover-image.webp"
-                  />
-                  <img
-                    id="6-bg__img"
-                    src="assets/images/awards-hover-image.webp"
-                  />
-                  <img
-                    id="7-bg__img"
-                    src="assets/images/contact-hover-image.webp"
-                  />
-                </div>
               </div>
             </div>
           </div>
         </nav>
       </div>
 
-      <section class="testimonial__header">
-        <figure class="image">
-          <img src="assets/images/product-thumb-a.png" alt="" />
-        </figure>
-        <div class="caption">
-          <div class="container">
-            <h1 class="title">Enquiries & Media</h1>
+      <section class="innerPageHero__wrapper">
+        <div class="hero__section">
+          <figure class="hero__image">
+            <img src="assets/images/solar.jpeg" alt="" />
+          </figure>
+
+          <div class="hero__caption">
+            <div class="container">
+              <p class="hero__description">Get in touch</p>
+              <h1 class="hero__title fs-45">
+                Get in touch with our team to learn more about Gillani Solar
+              </h1>
+            </div>
           </div>
         </div>
+        <div class="heroBottom__bg"></div>
       </section>
 
       <section class="contact__wrapper">
         <div class="container">
           <div class="innerPages__content">
-            <h2>
-              For any enquiries, questions or comments please fill out the
-              following form.
-            </h2>
             <div class="row">
               <div class="col-lg-6">
                 <div class="form__wrapper">
-                  <form class="form">
+                  <div class="mb-2 text-right fw-bold">* Required Field</div>
+
+                  <div id="response"></div>
+
+                  <form id="contactForm">
+                    <div class="form-floating mb-2">
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="name"
+                        id="floatingInput"
+                        placeholder=""
+                        required
+                      />
+                      <label class="form-label" for="floatingInput"
+                        >Name <span class="required">*</span></label
+                      >
+                    </div>
+                    <div class="form-floating mb-2">
+                      <input
+                        type="email"
+                        class="form-control"
+                        name="email"
+                        id="floatingInput"
+                        placeholder=""
+                      />
+                      <label class="form-label" for="floatingInput"
+                        >Email Address
+                      </label>
+                    </div>
+
+                    <div class="form-floating mb-2">
+                      <input
+                        type="phone"
+                        class="form-control"
+                        name="phone"
+                        id="floatingInput"
+                        placeholder=""
+                        required
+                      />
+                      <label class="form-label" for="floatingInput"
+                        >Phone <span class="required">*</span></label
+                      >
+                    </div>
+
+                    <div class="form-floating mb-2">
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="address"
+                        id="floatingInput"
+                        placeholder=""
+                        required
+                      />
+                      <label class="form-label" for="floatingInput"
+                        >Address <span class="required">*</span></label
+                      >
+                    </div>
+
+                    <div class="form-floating">
+                      <select
+                        name="interested_product"
+                        class="form-select"
+                        id="floatingSelect"
+                      >
+                        <option value="5KW On-Grid with Net Metering">
+                          5KW On-Grid with Net Metering
+                        </option>
+                        <option value="10KW On-Grid with Net Metering">
+                          10KW On-Grid with Net Metering
+                        </option>
+                        <option value="15KW On-Grid with Net Metering">
+                          15KW On-Grid with Net Metering
+                        </option>
+                        <option value="20KW On-Grid with Net Metering">
+                          20KW On-Grid with Net Metering
+                        </option>
+                        <option value="25KW On-Grid with Net Metering">
+                          25KW On-Grid with Net Metering
+                        </option>
+                        <option value="30KW On-Grid with Net Metering">
+                          30KW On-Grid with Net Metering
+                        </option>
+                      </select>
+                      <label class="form-label" for="floatingSelect">
+                        Interested Product</label
+                      >
+                    </div>
+
+                    <div class="form-floating">
+                      <textarea
+                        class="form-control form-areas"
+                        placeholder=""
+                        name="message"
+                        id="floatingTextarea2"
+                        required
+                      ></textarea>
+                      <label class="form-label" for="floatingTextarea2"
+                        >Message <span class="required">*</span></label
+                      >
+                    </div>
+
+                    <button
+                      type="submit"
+                      class="button-outer button-md button--blue"
+                    >
+                      <span class="button--text">submit</span>
+                      <i class="bi bi-arrow-right"></i>
+                    </button>
+                  </form>
+
+                  <!-- <form class="form">
                     <div class="form-control">
                       <input
                         type="email"
@@ -172,37 +254,51 @@
                       <label for="message" class="form-label">Message</label>
                     </div>
 
-                    <p>
-                      By clicking the button, you consent for Sunno to use
-                      automated technology, including texts and prerecorded
-                      messages, to contact you at the number and email provided
-                      about Sunno Energy offers. This consent is not required to
-                      make a purchase. Clicking the button constitutes your
-                      electronic signature.
-                    </p>
+                 
 
-                    <button class="button-outer button-md button--primary">
+                    <button class="button-outer button-md button--blue">
                       <span class="button--text">submit</span>
                       <i class="bi bi-arrow-right"></i>
                     </button>
-                  </form>
+                  </form> -->
                 </div>
               </div>
-              <div class="col-lg-4 offset-lg-2">
-                <div class="address__wrapper">
+              <div class="col-lg-5 offset-lg-1">
+                <div class="contact__info">
+                  <div class="contactInfo__item">
+                    <i class="bi bi-pin-map"></i>
+                    <div class="">
+                      <span>Location:</span>
+                      <h2>
+                        Al-Rafy Mall , 4 Zarrar Shaheed Rd, near jorypul,
+                        Al-Faisal Town, Lahore, Pakistan
+                      </h2>
+                    </div>
+                  </div>
+                  <div class="contactInfo__item">
+                    <i class="bi bi-envelope-open"></i>
+                    <div class="">
+                      <span>Email:</span>
+                      <h2>info@gillanisolar.com</h2>
+                    </div>
+                  </div>
+                  <div class="contactInfo__item">
+                    <i class="bi bi-telephone"></i>
+                    <div>
+                      <span>Phone:</span>
+                      <h2>+92 (304) 0001216</h2>
+                      <h2>+92 (321) 4411706</h2>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- <div class="address__wrapper">
                   <div class="address__item">
                     <h3>Pakistan</h3>
                     <h6>Lahore</h6>
-                    <p>
-                      Plot No 4, Adj. ATS Lane, Kacha Industrial Estate, 4-Km
-                      Kahna Kacha Road,
-                    </p>
+                    <p>Jorray Pull Chowk</p>
                   </div>
-                  <!-- <div class="address__item">
-                    <h3>Singapora</h3>
-                    <p>22 Robinson Road #09-04 Singapore 068893</p>
-                  </div> -->
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
@@ -212,107 +308,41 @@
 
     <footer>
       <div class="container">
-        <div class="newsletter__wrapper">
-          <div class="row">
-            <div class="col-lg-6">
-              <div class="mainHeading__wrap nomargin">
-                <h2 class="mainHeading__text border--white text--white">
-                  Stay up to date on the latest PEMPAK news
-                </h2>
-              </div>
-            </div>
-            <div class="col-lg-5 offset-lg-1">
-              <div class="newsletter__form">
-                <p>
-                  For any enquiries, questions or comments please fill out the
-                  following form.
-                </p>
-
-                <form class="form-md">
-                  <div class="form-group">
-                    <input
-                      id="form_name1"
-                      class="form-control"
-                      type="text"
-                      required
-                    />
-                    <label for="form_name1">Email Address</label>
-                  </div>
-                </form>
-
-                <button
-                  type="submit"
-                  class="button-outer button-md button--white full-width-button"
-                >
-                  <span class="button--text"> submit </span>
-                  <i class="bi bi-arrow-right"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
         <div class="footerBottom__wrapper">
           <ul class="footerMenu__wrapper">
             <li>
-              <a href="about.html" class="footerMenu__link">About Company </a>
+              <a href="about.html" class="footerMenu__link">About </a>
             </li>
             <li>
-              <a href="our-products.html" class="footerMenu__link"
-                >Current Projects
-              </a>
+              <a href="packages.html" class="footerMenu__link"> Packages </a>
             </li>
             <li>
-              <a href="latest-news.html" class="footerMenu__link"
-                >Latest News
-              </a>
+              <a href="products.html" class="footerMenu__link">Products </a>
             </li>
             <li>
-              <a href="testimonials.html" class="footerMenu__link"
-                >Testimonials
-              </a>
-            </li>
-            <li>
-              <a href="terms.html" class="footerMenu__link"
-                >Terms of Service
-              </a>
+              <a href="contact.html" class="footerMenu__link">Contact </a>
             </li>
           </ul>
 
           <ul class="social__wrapper">
             <li class="social__item">
               <a
-                href="https://www.facebook.com/PerfectElektroMek/"
+                href="https://www.facebook.com/profile.php?id=61575622862205"
                 target="_blank"
               >
                 <i class="bi bi-facebook"></i>
               </a>
             </li>
             <li class="social__item">
-              <a href="https://www.instagram.com/pempak" target="_blank">
+              <a href="https://www.instagram.com/gillanisolar/" target="_blank">
                 <i class="bi bi-instagram"></i>
-              </a>
-            </li>
-            <li class="social__item">
-              <a href="https://twitter.com/pempak_mek" target="_blank">
-                <i class="bi bi-twitter-x"></i>
-              </a>
-            </li>
-            <li class="social__item">
-              <a
-                href="https://pk.linkedin.com/company/perfect-elektro-mek"
-                target="_blank"
-              >
-                <i class="bi bi-linkedin"></i>
-              </a>
-            </li>
-            <li class="social__item">
-              <a href="https://www.youtube.com/@Pempak736" target="_blank">
-                <i class="bi bi-youtube"></i>
               </a>
             </li>
           </ul>
         </div>
-        <p class="copyright__text">Copyright © 2018 - 2025 PEMPAK Pvt LTD</p>
+        <p class="copyright__text">
+          Copyright © 2018 - 2025 Gillani Solar Pvt LTD
+        </p>
       </div>
     </footer>
 
@@ -325,16 +355,22 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-      $(function () {
-        $(".testimonialsCard__wrap").slice(0, 4).show(); // Show initial 4 items
-        $("#loadMore").on("click", function (e) {
-          e.preventDefault();
-          $(".testimonialsCard__wrap:hidden").slice(0, 2).slideDown(); // Show 4 more items
+      $("#contactForm").on("submit", function (e) {
+        e.preventDefault();
 
-          if ($(".testimonialsCard__wrap:hidden").length == 0) {
-            $("#loadMore").fadeOut("slow"); // Hide the Load More button
-            $("#fadeEffect__testimonials").fadeOut("slow"); // Hide the fading effect
-          }
+        $.ajax({
+          url: "send_email.php", // backend file
+          type: "POST",
+          data: $(this).serialize(),
+          success: function (response) {
+            $("#response").html('<p style="color:green;">' + response + "</p>");
+            $("#contactForm")[0].reset();
+          },
+          error: function () {
+            $("#response").html(
+              '<p style="color:red;">Something went wrong.</p>'
+            );
+          },
         });
       });
     </script>

@@ -1,0 +1,128 @@
+.packages__tab {
+  .nav-tabs {
+    border: 0;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+
+    .nav-link {
+      border: 0;
+      border-radius: 0;
+      font-size: 20px;
+      font-weight: 700;
+      color: $brand-second-color;
+      background: $grey-color-1;
+      border-radius: 50px;
+      padding: 15px 45px;
+
+      &.active {
+        background: $brand-blue-color;
+        border-radius: 50px;
+        color: white;
+      }
+    }
+  }
+}
+
+// plan item starts
+.planItem {
+  --bgColor: #fff;
+  --boxShadow: none;
+
+  &__container {
+    --direction: column;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  background-color: var(--bgColor);
+  border: 1px solid $light-grey-color;
+  box-shadow: var(--boxShadow);
+  padding: 2rem 1.5rem;
+  display: inline-flex;
+  flex-direction: column;
+
+  .price {
+    --priceMargin: 2rem 0;
+  }
+
+  .button {
+    margin-top: auto;
+  }
+}
+// plan item ends
+
+.card {
+  --titleColor: #000;
+  border: 0;
+
+  &__header {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  h2 {
+    color: var(--titleColor);
+    font-size: 1.5rem;
+    line-height: 1.2;
+    font-weight: 400;
+    margin: 0;
+    flex-grow: 1;
+
+    span {
+      font-weight: 700;
+      font-size: 40px;
+      border-radius: 100px;
+      width: 120px;
+      height: 120px;
+      background: $brand-second-color;
+      color: white;
+      @include flex-center;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.price {
+  color: $brand-blue-color;
+  border-radius: 10px;
+  padding: 20px 0;
+  text-align: center;
+  font-weight: 700;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.featureList {
+  color: $brand-second-color;
+  padding: 0;
+  font-weight: 500;
+
+  li {
+    color: var(--color);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    padding-left: 20px;
+
+    &:before {
+      content: "\F26E";
+      font-family: "bootstrap-icons" !important;
+      display: block;
+      width: 1.125rem;
+      height: var(--height);
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

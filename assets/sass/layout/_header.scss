@@ -26,7 +26,7 @@ header {
       .logo {
         img {
           width: 187px;
-          height: 36px;
+          // height: 36px;
         }
       }
     }
@@ -42,8 +42,9 @@ header {
       }
 
       .phone__no {
-        font-weight: 300;
+        font-weight: 600;
         color: $white-color;
+        font-size: 24px;
         @include media-breakpoint-down(md) {
           display: none;
         }
@@ -92,28 +93,6 @@ header {
       }
     }
   }
-
-  // &.white {
-  //   .logo__holder {
-  //     .logo {
-  //       img {
-  //         filter: brightness(0%);
-  //       }
-  //     }
-  //   }
-
-  //   .phone__no {
-  //     color: $black-color !important;
-  //   }
-
-  //   .toggleButton__outer {
-  //     .toggleButton__wrap {
-  //       span {
-  //         background: $black-color !important;
-  //       }
-  //     }
-  //   }
-  // }
 }
 
 .toggleButton__wrap.active .top {
@@ -179,19 +158,30 @@ header {
     }
     .nav {
       display: flex;
-      flex-direction: column;
+      row-gap: 3rem;
+
+      @include media-breakpoint-down(md) {
+        flex-direction: column;
+        row-gap: 1rem;
+      }
+
       .menu__item {
         position: relative;
         opacity: 0;
         display: inline;
         width: fit-content;
+        width: 33.3333%;
+
+        @include media-breakpoint-down(md) {
+          width: 100%;
+        }
 
         .menu__link {
           position: relative;
-          font-size: 45px;
-          color: #ccc;
+          font-size: 55px;
+          color: white;
           z-index: 2;
-          font-weight: 300;
+          font-weight: 500;
           padding: 20px 0;
 
           @include media-breakpoint-down(md) {
@@ -224,34 +214,6 @@ header {
         }
       }
     }
-    .menu__img {
-      position: absolute;
-      width: 500px;
-      height: 250px;
-      top: 30px;
-      right: 0;
-      opacity: 10;
-      overflow: hidden;
-
-      @include media-breakpoint-down(md) {
-        display: none;
-      }
-    }
-    .menu__img {
-      img {
-        position: absolute;
-        @include object-fit-cover;
-        top: 0;
-        left: 0;
-        transition: 0.8s cubic-bezier(0.9, 0, 0.1, 1);
-        clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
-
-        &.active {
-          transform: scale(1);
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-        }
-      }
-    }
   }
 }
 
@@ -280,7 +242,6 @@ header {
   .logo__holder {
     img {
       width: 118px !important;
-      height: 38px !important;
     }
   }
   .outline-button-md {

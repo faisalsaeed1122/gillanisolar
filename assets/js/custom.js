@@ -18,17 +18,6 @@ $(document).ready(function () {
     }
   });
 
-  $(function () {
-    "use strict";
-    $(".menu__item").on("mouseenter", function () {
-      let id = $(this).data("id");
-      $("#" + id + "-bg__img").addClass("active");
-    });
-    $(".menu__item").on("mouseleave", function () {
-      $(".menu__img img").removeClass("active");
-    });
-  });
-
   // swiper js for tasker carousel
   var swiper = new Swiper(".our-products", {
     slidesPerView: 1,
@@ -182,34 +171,37 @@ $(document).ready(function () {
     },
   });
 
-  var swiper = new Swiper(".images-gallery", {
-    slidesPerView: 1,
+  var swiper = new Swiper(".our__team", {
+    slidesPerView: 1.1,
     spaceBetween: 20,
-    autoHeight: true,
+    autoHeight: false,
     centeredSlides: false,
     grabCursor: true,
     loop: false,
-    freeMode: true,
 
+    navigation: {
+      nextEl: ".team-button-next",
+      prevEl: ".team-button-prev",
+    },
     breakpoints: {
       640: {
-        slidesPerView: 0.8,
+        slidesPerView: 1.5,
         spaceBetween: 20,
       },
       768: {
-        slidesPerView: 0.8,
+        slidesPerView: 2.5,
         spaceBetween: 20,
       },
       1024: {
-        slidesPerView: 0.8,
+        slidesPerView: 2.5,
         spaceBetween: 20,
       },
       1645: {
-        slidesPerView: 0.8,
+        slidesPerView: 2.5,
         spaceBetween: 20,
       },
       1920: {
-        slidesPerView: 0.8,
+        slidesPerView: 2.5,
         spaceBetween: 30,
       },
     },

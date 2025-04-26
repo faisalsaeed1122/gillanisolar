@@ -7,15 +7,15 @@
 @import "layout/footer", "layout/header";
 
 @import "pages/homepage", "pages/about", "pages/products", "pages/news",
-  "pages/testimonials", "pages/contact", "pages/pempak-green";
+  "pages/packages", "pages/contact", "pages/team";
 
 @import "components/buttons", "components/radios-checkboxes", "components/input",
   "components/breadcrumb", "components/helper-classes", "components/card";
 
 body {
-  font-family: "Satoshi-Regular";
-  font-optical-sizing: auto;
-  font-weight: 600;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   font-style: normal;
   color: $text-color;
 }
@@ -147,7 +147,7 @@ body.scroll-locked {
   .mainHeading__text {
     position: relative;
     font-size: 56px;
-    font-weight: 500;
+    font-weight: 600;
     margin-bottom: 0;
     padding: 10px 0;
 
@@ -234,7 +234,7 @@ body.scroll-locked {
     display: flex;
     justify-content: flex-end;
     flex-direction: column;
-    height: calc(100vh + 100px);
+    height: calc(50vh + 100px);
     background: rgba(0, 0, 0, 0.7);
     color: $white-color;
     align-items: flex-start;
@@ -248,7 +248,7 @@ body.scroll-locked {
       font-size: 112px;
       color: $white-color;
       line-height: 1;
-      font-weight: 700;
+      font-weight: 500;
       margin-bottom: 0;
 
       @include media-breakpoint-down(md) {
@@ -258,6 +258,9 @@ body.scroll-locked {
 
       &.fs-60 {
         font-size: 60px;
+      }
+      &.fs-45 {
+        font-size: 45px;
       }
     }
     .hero__description {
@@ -329,57 +332,9 @@ body.scroll-locked {
   z-index: 1;
 }
 
-.registration__wrapper {
-  .registration__grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    @include media-breakpoint-down(md) {
-      grid-template-columns: repeat(1, 1fr);
-    }
-
-    .registration__card {
-      background: #f4f4f1;
-      padding: 30px;
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-
-      .figure__holder {
-        width: 150px;
-        height: 150px;
-        background: white;
-        @include border-radius(50%);
-        @include flex-center;
-        padding: 10px;
-        overflow: hidden;
-        img {
-          width: 100%;
-        }
-      }
-
-      .institution__title {
-        font-size: 28px;
-        font-weight: 700;
-      }
-    }
-  }
-
-  .registration__grid .registration__card:nth-child(even) {
-    margin-top: 2rem;
-    @include media-breakpoint-down(md) {
-      margin-top: 0;
-    }
-  }
-
-  .registration__grid .registration__card:nth-child(odd) {
-    align-self: start;
-  }
-}
-
-.certification__wrapper {
+.latestNews__wrapper {
   background: #bbbbba;
-  .certification__inner {
+  .latestNews__inner {
     padding: 120px 0 120px 40px;
     border-left: 2px solid $light-grey-color;
     // margin-left: 80px;
@@ -388,31 +343,6 @@ body.scroll-locked {
       padding: 50px 0 50px 0;
       border-left: 0;
       margin-left: 0;
-    }
-
-    .certification__grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 0.5rem;
-      @include media-breakpoint-down(md) {
-        grid-template-columns: repeat(1, 1fr);
-      }
-
-      .certification__item {
-        background: #f4f4f1;
-        padding: 30px;
-
-        figure {
-          margin-bottom: 1rem;
-          img {
-            width: 100%;
-          }
-        }
-        h4 {
-          font-size: 20px;
-          font-weight: 700;
-        }
-      }
     }
   }
 }

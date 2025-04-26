@@ -63,11 +63,16 @@
   color: $brand-color;
 }
 .blue-color-text {
-  color: $text-color;
+  color: $brand-blue-color;
 }
+.green-color-text {
+  color: $brand-green-color;
+}
+
 .grey-color-text {
   color: rgb(106, 113, 154);
 }
+
 .text-success {
   color: $success-color !important;
 }
